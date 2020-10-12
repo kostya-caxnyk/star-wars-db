@@ -7,19 +7,19 @@ export default class Header extends Component {
     return (
       <div className="header d-flex">
       <h3>
-        <a href="#">
+        <a href="https://www.google.com">
           Star DB
         </a>
       </h3>
       <ul className="d-flex">
         <li>
-          <a href="#">People</a>
+          <a href="https://www.google.com">People</a>
         </li>
         <li>
-          <a href="#">Planets</a>
+          <a href="https://www.google.com">Planets</a>
         </li>
         <li>
-          <a href="#">Starships</a>
+          <a href="https://www.google.com">Starships</a>
         </li>
       </ul>
     </div>

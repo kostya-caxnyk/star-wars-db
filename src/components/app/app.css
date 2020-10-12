@@ -1,3 +1,7 @@
-.content{
-    justify-content: space-between;
+.content {
+  justify-content: space-between;
+}
+
+.margin-top {
+  margin-top: 40px;
 }
