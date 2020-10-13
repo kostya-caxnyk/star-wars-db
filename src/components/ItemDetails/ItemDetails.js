@@ -5,6 +5,17 @@ import Spinner from '../spinner';
 
 import './ItemDetails.css';
 
+const Record = ({ label, field, item }) => {
+  return (
+    <li className="list-group-item">
+      <span className="term">{label}</span>
+      <span>{item[field]}</span>
+    </li>
+  );
+};
+
+export { Record };
+
 export default class ItemDeatails extends Component {
   state = {
     item: null,
@@ -57,31 +68,18 @@ export default class ItemDeatails extends Component {
       );
     }
 
-    const { name, gender, eyeColor, birthYear } = this.state.item;
-    console.log(image)
+    const { name } = item;
+
     return (
       <div className="item-details card">
-        <img
-          className="item-image"
-          src={image}
-          alt={name}
-        />
+        <img className="item-image" src={image} alt={name} />
 
         <div className="card-body">
           <h4>{name}</h4>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">
-              <span className="term">Gender</span>
-              <span>{gender}</span>
-            </li>
-            <li className="list-group-item">
-              <span className="term">Birth Year</span>
-              <span>{birthYear}</span>
-            </li>
-            <li className="list-group-item">
-              <span className="term">Eye Color</span>
-              <span>{eyeColor}</span>
-            </li>
+            {React.Children.map(this.props.children, (child, index) => {
+              return React.cloneElement(child, {item});
+            })}
           </ul>
         </div>
       </div>
