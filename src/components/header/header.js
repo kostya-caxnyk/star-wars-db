@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import './header.css';
 
 export default class Header extends Component {
   render() {
     return (
       <div className="header d-flex">
-      <h3>
-        <a href="https://www.google.com">
-          Star DB
-        </a>
-      </h3>
-      <ul className="d-flex">
-        <li>
-          <a href="https://www.google.com">People</a>
-        </li>
-        <li>
-          <a href="https://www.google.com">Planets</a>
-        </li>
-        <li>
-          <a href="https://www.google.com">Starships</a>
-        </li>
-      </ul>
-    </div>
+        <h3>
+          <Link to="/">Star DB</Link>
+        </h3>
+        <ul className="d-flex">
+          <li>
+            <Link to="/people/">People</Link>
+          </li>
+          <li>
+            <Link to="/planets/">Planets</Link>
+          </li>
+          <li>
+            <Link to="/starships/">Starships</Link>
+          </li>
+        </ul>
+      </div>
     );
   }
 }
