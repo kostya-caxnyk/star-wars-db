@@ -21,6 +21,12 @@ export default class Header extends Component {
           <li>
             <Link to="/starships/">Starships</Link>
           </li>
+          <li>
+            <Link to="/secret/">Secret page</Link>
+          </li>
+          <li>
+            <Link to="/login/">Login</Link>
+          </li>
         </ul>
       </div>
     );
